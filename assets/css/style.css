@@ -512,11 +512,12 @@ h1, h2, h3, h4, h5, h6 {
   background: url("../img/razcom-flat.png") top center;
   background-size: cover;
   position: relative;
+  opacity: 1;
 }
 
 #hero:before {
   content: "";
-  background: rgba(34,61,128, 0.7);
+  background: rgba(34,61,128, 1);
   position: absolute;
   bottom: 0;
   top: 0;
