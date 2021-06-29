@@ -45,7 +45,7 @@
 
       <!-- <h1 class="logo mr-auto"><a href="index.html">RAZCOM</a></h1> -->
       <!-- Uncomment below if you prefer to use an image logo -->
-      <a href="index.html" class="logo mr-auto"><img src="assets/img/razcom_white.png"  alt="" class="img-fluid"></a>
+      <a href="index.html" class="logo mr-auto"><img src="assets/img/razcom_white.png" alt="" class="img-fluid"></a>
 
       <nav class="nav-menu d-none d-lg-block">
         <ul>
@@ -807,11 +807,13 @@
                       data-rule="minlen:4" data-msg="Por favor ingrese almenos 4 caracteres !" />
                     <div class="validate"></div>
                   </div>
+
                   <div class="form-group col-lg-12">
                     <input type="text" class="form-control" name="mun" id="mun" placeholder="Municipio"
                       data-rule="minlen:4" data-msg="Por favor ingrese almenos 4 caracteres !" />
                     <div class="validate"></div>
                   </div>
+
                   <div class="form-group col-lg-12">
                     <input type="text" class="form-control" name="address" id="address"
                       placeholder="Dirección de la comunidad" data-rule="minlen:4"
@@ -824,23 +826,22 @@
                     <label for="slcargo">Cargo en la Comunidad</label>
                     <select class="form-control" id="slcargo">
                       <option>Administrador</option>
-                      <option>Excel</option>
+                      <option>Junta Directiva</option>
+                      <option>Miembro de Comité</option>
+                      <option>Condómino/Copropietario</option>
+                      <option>Proveedor</option>
                       <option>Otro</option>
-                      <option>Ninguno</option>
-
                     </select>
                   </div>
 
 
                 </div>
-
-
                 <div class="mb-3">
                   <div class="loading">Loading</div>
-                  <div class="error-message"></div>
-                  <div class="sent-message">Su solicitud ha sido enviada, en un momento más lo contactaremos.</div>
+                  <!-- <div class="error-message"></div>
+                  <div class="sent-message">Su solicitud ha sido enviada, en un momento más lo contactaremos.</div> -->
                 </div>
-                <div class="text-center"><button type="submit" class=" btn-get-started scrollto">Solicitar</button>
+                <div class="text-center"><button id="SendR" type="submit">Solicitar</button>
                 </div>
               </form>
             </div>
@@ -852,11 +853,7 @@
               </h3>
 
             </div>
-
           </div>
-
-
-
         </div>
       </div>
 
@@ -987,34 +984,36 @@
 
           <div class="col-lg-6">
             <form action="forms/contact.php" method="post" role="form" class="php-email-form">
+              <!-- <div class="php-email-form"> -->
               <div class="form-row">
                 <div class="col-md-6 form-group">
-                  <input type="text" name="name" class="form-control" id="name" placeholder="Nombre"
+                  <input type="text" name="name" class="form-control" id="Cname" placeholder="Nombre"
                     data-rule="minlen:4" data-msg="Por favor ingresa almenos 4 caracteres !" />
                   <div class="validate"></div>
                 </div>
                 <div class="col-md-6 form-group">
-                  <input type="email" class="form-control" name="email" id="email" placeholder="Correo Electrónico"
+                  <input type="email" class="form-control" name="email" id="Cemail" placeholder="Correo Electrónico"
                     data-rule="email" data-msg="Por favor ingresa un correo valido !" />
                   <div class="validate"></div>
                 </div>
               </div>
               <div class="form-group">
-                <input type="text" class="form-control" name="subject" id="subject" placeholder="Asunto"
+                <input type="text" class="form-control" name="subject" id="Csubject" placeholder="Asunto"
                   data-rule="minlen:4" data-msg="Por favor ingresa almenos 4 caracteres !" />
                 <div class="validate"></div>
               </div>
               <div class="form-group">
-                <textarea class="form-control" name="message" rows="5" data-rule="required"
+                <textarea class="form-control" name="message" rows="5" id="Cmessage" data-rule="required"
                   data-msg="Por favor comentanos en que podemos servirte" placeholder="Mensaje"></textarea>
                 <div class="validate"></div>
               </div>
               <div class="mb-3">
                 <div class="loading">Loading</div>
-                <div class="error-message"></div>
-                <div class="sent-message">Su mensaje ha sido enviado .Muchas Gracias !</div>
+                <!-- <div class="error-message"></div>
+                <div class="sent-message">Su mensaje ha sido enviado .Muchas Gracias !</div> -->
+                <!-- </div> -->
+                <div class="text-center"><button id="Send" type="submit">Enviar</button></div>
               </div>
-              <div class="text-center"><button type="submit">Enviar</button></div>
             </form>
           </div>
 
@@ -1122,6 +1121,61 @@
   <!-- Template Main JS File -->
   <script src="assets/js/main.js"></script>
 
+  <script type="text/javascript">
+    $(document).ready(function () {
+      $('#Send').on('click', function () {
+
+        var name = $('#Cname').val();
+        var email = $('#Cemail').val();
+        var subject = $('#Csubject').val();
+        var msj = $('#Cmessage').val();
+        
+        if (name.length >= 4 && email.indexOf('@') >= 0 && subject.length > 0 && msj.length > 0) {
+          var bbody = 'Aquien corresponda' +'\n\n'+
+                      'Por medio de la presente le hago notificación que : ' + '\n'+ 
+                      'El usuario con nombre : ' + name + '\n' + 
+                      'Envio el siguiente mensaje : ' + msj + '\n\n'+
+                      '\n\n'+
+                      'Fecha de envío : ' + new Date().toUTCString();
+
+          alert(bbody);
+          //window.location = 'mailto:' + '{0}' + '?subject=' + subject + '&body=' + bbody;
+        }
+      });
+
+      $('#SendR').on('click',function (){
+        var name = $('#name').val();
+        var lastn = $('#lastn').val();
+        var email = $('#email').val();
+        var state = $('#state').val();
+        var mun = $('#mun').val();
+        var address= $('#address').val();
+        var cargo = $('#slcargo option:selected').text();
+        
+
+        //alert(name +' ' + lastn + ' ' + email + ' ' + state + ' '+ mun + ' ' + address + ' ' + cargo);
+        if(name.length>=4 && lastn.length>=4 && email.indexOf('@')>= 0&& state.length>=4 && mun.length>=4 && address.length>=4 && cargo.length>0 )
+        {
+            var bbody='A quien corresponda '+'\n\n'+
+                      'Por medio de la presente le hago notificación que : ' +'\n\n'+
+                      'C. ' + name + ' ' + lastn +' con correo electrónico: ' + email + '\n'+
+                      'Del Estado de :' + state +' y  municipio  en : ' + mun+ '\n'+
+                      'con dirección en : ' + address + ' y con el cargo de :' + cargo +'\n'+
+                      'solicita información acerca de una cotización de servicios' +'\n\n'+
+                      '\n\n'+
+                      'Fecha de envío : ' + new Date().toUTCString();
+
+                      alert(bbody);
+                      //window.location= 'mailto:' + '{0}' + '?subject=' + 'Cotización de servicios ' + new Date().toUTCString()  + + '&body=' + bbody;
+
+
+        }
+
+      });
+
+    });
+
+  </script>
 </body>
 
 </html>
