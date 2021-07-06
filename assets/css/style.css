@@ -114,11 +114,17 @@ h1, h2, h3, h4, h5, h6 {
   font-family: "Poppins", sans-serif;
 }
 
+
 #header .logo a {
   color: #fff;
 }
 
 #header .logo img {
+  max-height: 0px;
+}
+
+#header .logo img.header-scrolled
+{
   max-height: 40px;
 }
 
