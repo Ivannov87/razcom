@@ -513,17 +513,25 @@ h1, h2, h3, h4, h5, h6 {
 /*--------------------------------------------------------------
 # Hero Section
 --------------------------------------------------------------*/
+/*ORIGINAL*/
+/* #hero {
+  width: 100%;
+  height: 80vh;
+  background: url("../img/razcom_flat_b.png") no-repeat center center fixed; 
+ 
+  background-size: cover;
+   position: relative; 
+} */
 
+/*Razcom*/
 #hero {
   width: 100%;
   height: 80vh;
   background: url("../img/razcom_flat_b.png") no-repeat center center fixed; 
-  /* -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;*/
-  background-position: center 0%;
-  background-size: 100% 70% ;
-   position: relative; 
+  background-size: cover;
+  position: relative;
+  background-position-y: -17vh;
+
 }
 
 #hero:before {
@@ -579,16 +587,39 @@ h1, h2, h3, h4, h5, h6 {
   background: #7789a2;
 }
 
-@media (min-width: 1024px) {
+
+@media (max-width: 480px) {
   #hero {
     background-attachment: fixed;
+    background-size:  480px 100%;
+    background-position-y: -17vh;
+    
   }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 780px) {
+  #hero {
+    background-attachment: fixed;
+    background-size:  780px 100%;
+    background-position-y: -17vh;
+  }
+}
+
+@media (min-width: 1024px) {
+  #hero {
+    background-attachment: fixed;
+    background-size:  100% 100%;
+    background-position-y: -17vh;
+  }
+}
+
+/* @media (max-width: 768px) {
   #hero {
     height: 100vh;
-  }
+    /* background-size: 350px 100%; */
+  } */
+
+
   #hero h1 {
     font-size: 28px;
     line-height: 36px;
