@@ -27,6 +27,12 @@ h1, h2, h3, h4, h5, h6 {
   font-family: "Raleway", sans-serif;
 }
 
+.row{
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: -15px;
+  margin-right: 0px;
+}
 /*--------------------------------------------------------------
 # Back to top button
 --------------------------------------------------------------*/
@@ -605,18 +611,17 @@ h1, h2, h3, h4, h5, h6 {
   }
 }
 
-@media (min-width: 1024px) {
+@media (max-width: 1024px) {
   #hero {
     background-attachment: fixed;
-    background-size:  100% 100%;
+    background-size:  1024px 100%;
     background-position-y: -17vh;
   }
 }
 
-/* @media (max-width: 768px) {
+/* @media (min-width: 768px) {
   #hero {
     height: 100vh;
-    /* background-size: 350px 100%; 
   } */
 
 

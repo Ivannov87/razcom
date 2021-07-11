@@ -45,7 +45,7 @@
 
       <!-- <h1 class="logo mr-auto"><a href="index.html"></a></h1> -->
       <!-- Uncomment below if you prefer to use an image logo -->
-      <a  href="index.html" class="logo mr-auto "><img  src="assets/img/razcom_w.png" alt="" class="header img-fluid"></a>
+      <a href="index.html" class="logo mr-auto "><img src="assets/img/razcom_w.png" alt="" class="header img-fluid"/></a>
 
       <nav class="nav-menu d-none d-lg-block">
         <ul>
@@ -84,14 +84,14 @@
 
   <!-- ======= Hero Section ======= -->
   <section id="hero" class="d-flex justify-content-center">
-    
+
     <div class="container position-relative text-md-right">
-      
-        <a href="#cotizar" class="btn-get-started scrollto ">Cotizar</a>
-      
+
+      <a href="#cotizar" class="btn-get-started scrollto ">Cotizar</a>
+
       <!-- <h1>Bienvenido</h1>
       <h2>Razcom servicios Integrales de Adminstración S.A. de C.V.</h2> -->
-      
+
     </div>
   </section><!-- End Hero -->
 
@@ -99,9 +99,9 @@
 
     <div class="back-social">
       <div class="social-links text-center text-md-right pt-3 pt-md-0">
-        <a href="https://facebook.com/AdministracionRazcom" class="facebook"><i
-            class="bx bxl-facebook"></i></a>
-        <a href="https://api.whatsapp.com/send?phone=+525627096117&text=Hola%20que%20tal,%20me%20encuentro%20interesado%20en%20los%20servicios%20publicados%20de%20administraci%C3%B3n,%20esperando%20su%20pronta%20respuesta,%20quedo%20de%20ustedes%20para%20cualquier%20informaci%C3%B3n%20requiera%20necesaria." class="whatsapp"><i class="bx bxl-whatsapp"></i></a>
+        <a href="https://facebook.com/AdministracionRazcom" class="facebook"><i class="bx bxl-facebook"></i></a>
+        <a href="https://api.whatsapp.com/send?phone=+525627096117&text=Hola%20que%20tal,%20me%20encuentro%20interesado%20en%20los%20servicios%20publicados%20de%20administraci%C3%B3n,%20esperando%20su%20pronta%20respuesta,%20quedo%20de%20ustedes%20para%20cualquier%20informaci%C3%B3n%20requiera%20necesaria."
+          class="whatsapp"><i class="bx bxl-whatsapp"></i></a>
         <!-- <a href="#" class=""><i class=""></i></a> -->
         <!-- <a href="#" class="google-plus"><i class="bx bxl-skype"></i></a> -->
         <!-- <a href="#" class="linkedin"><i class="bx bxl-linkedin"></i></a> -->
@@ -506,7 +506,7 @@
                 class="venobox details-link" title="Portfolio Details"><i class="bx bx-link"></i></a>
             </div> -->
           </div>
-<!-- 
+          <!-- 
           <div class="col-lg-4 col-md-6 portfolio-item filter-web">
             <img src="assets/img/portfolio/portfolio-5.jpg" class="img-fluid" alt="">
             <div class="portfolio-info">
@@ -1045,10 +1045,7 @@
             <strong>email:</strong> administracion@razcom.com.mx<br>
             </p>
           </div>
-          <div class="col-lg-3 col-md-6 footer-contact">
-            <!-- <iframe width="720" height="300" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" id="gmap_canvas" src="https://maps.google.com/maps?width=520&amp;height=400&amp;hl=en&amp;q=Av.%20Revoluci%C3%B3n%20No.%20553%20CDMX+(RAZCOM)&amp;t=&amp;z=12&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"></iframe> -->
-            <!-- <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d384.3318192001509!2d-99.18645726412032!3d19.38898394188841!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85d1ff951b95ef9d%3A0x8a0ddd88dca7854f!2sAv.%20Revoluci%C3%B3n%20553%2C%20San%20Pedro%20de%20los%20Pinos%2C%20Benito%20Ju%C3%A1rez%2C%2003800%20Ciudad%20de%20M%C3%A9xico%2C%20CDMX!5e0!3m2!1ses!2smx!4v1624921927037!5m2!1ses!2smx" width="720" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe> -->
-          </div>
+        
           <!-- <div class="col-lg-2 col-md-6 footer-links">
             <h4>Useful Links</h4>
             <ul>
@@ -1084,7 +1081,6 @@
     </div>
 
     <div class="container d-md-flex py-4">
-
       <div class="mr-md-auto text-center text-md-left">
         <div class="copyright">
           &copy; Copyright <strong><span><a href="https://kcoded.com">KCoded</a></span></strong>. All Rights Reserved
@@ -1131,44 +1127,43 @@
         var email = $('#Cemail').val();
         var subject = $('#Csubject').val();
         var msj = $('#Cmessage').val();
-        
+
         if (name.length >= 4 && email.indexOf('@') >= 0 && subject.length > 0 && msj.length > 0) {
-          var bbody = 'Aquien corresponda' +'\n\n'+
-                      'Por medio de la presente le hago notificación que : ' + '\n'+ 
-                      'El usuario con nombre : ' + name + '\n' + 
-                      'Envio el siguiente mensaje : ' + msj + '\n\n'+
-                      '\n\n'+
-                      'Fecha de envío : ' + new Date().toUTCString();
+          var bbody = 'Aquien corresponda' + '\n\n' +
+            'Por medio de la presente le hago notificación que : ' + '\n' +
+            'El usuario con nombre : ' + name + '\n' +
+            'Envio el siguiente mensaje : ' + msj + '\n\n' +
+            '\n\n' +
+            'Fecha de envío : ' + new Date().toUTCString();
 
           //alert(bbody);
           window.location = 'mailto:' + 'administracion@razcom.com.mx' + '?subject=' + subject + '&body=' + bbody;
         }
       });
 
-      $('#SendR').on('click',function (){
+      $('#SendR').on('click', function () {
         var name = $('#name').val();
         var lastn = $('#lastn').val();
         var email = $('#email').val();
         var state = $('#state').val();
         var mun = $('#mun').val();
-        var address= $('#address').val();
+        var address = $('#address').val();
         var cargo = $('#slcargo option:selected').text();
-        
+
 
         //alert(name +' ' + lastn + ' ' + email + ' ' + state + ' '+ mun + ' ' + address + ' ' + cargo);
-        if(name.length>=4 && lastn.length>=4 && email.indexOf('@')>= 0&& state.length>=4 && mun.length>=4 && address.length>=4 && cargo.length>0 )
-        {
-            var bbody='A quien corresponda '+'\n\n'+
-                      'Por medio de la presente le hago notificación que : ' +'\n\n'+
-                      'C. ' + name + ' ' + lastn +' con correo electrónico: ' + email + '\n'+
-                      'Del Estado de :' + state +' y  municipio  en : ' + mun+ '\n'+
-                      'con dirección en : ' + address + ' y con el cargo de :' + cargo +'\n'+
-                      'solicita información acerca de una cotización de servicios' +'\n\n'+
-                      '\n\n'+
-                      'Fecha de envío : ' + new Date().toUTCString();
+        if (name.length >= 4 && lastn.length >= 4 && email.indexOf('@') >= 0 && state.length >= 4 && mun.length >= 4 && address.length >= 4 && cargo.length > 0) {
+          var bbody = 'A quien corresponda ' + '\n\n' +
+            'Por medio de la presente le hago notificación que : ' + '\n\n' +
+            'C. ' + name + ' ' + lastn + ' con correo electrónico: ' + email + '\n' +
+            'Del Estado de :' + state + ' y  municipio  en : ' + mun + '\n' +
+            'con dirección en : ' + address + ' y con el cargo de :' + cargo + '\n' +
+            'solicita información acerca de una cotización de servicios' + '\n\n' +
+            '\n\n' +
+            'Fecha de envío : ' + new Date().toUTCString();
 
-                      //alert(bbody);
-                      window.location= 'mailto:' + 'serviciosintegralesrazcom@gmail.com' + '?subject=' + 'Cotización de servicios ' + new Date().toUTCString()  + + '&body=' + bbody;
+          //alert(bbody);
+          window.location = 'mailto:' + 'serviciosintegralesrazcom@gmail.com' + '?subject=' + 'Cotización de servicios ' + new Date().toUTCString() + + '&body=' + bbody;
 
 
         }
